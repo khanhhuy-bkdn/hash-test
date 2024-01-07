@@ -1,0 +1,109 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+body {
+  /* font-family: 'Open Sans', sans-serif; */
+  color: white;
+  background: #150e39;
+}
+
+/* For Webkit-based browsers (Chrome, Safari) */
+/* Customize the scrollbar's track */
+::-webkit-scrollbar {
+  width: 7px; /* Width of the scrollbar */
+  background: white;
+  border-radius: 5px; /* Rounded corners of the thumb */
+  height: 4px; /* height of horizontal scrollbar ← You're missing this */
+}
+
+/* Customize the scrollbar's thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #ffaf1d; /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners of the thumb */
+}
+
+/* Customize the scrollbar's track when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffaf1d;
+}
+
+/* Customize the scrollbar's track when active/pressed */
+::-webkit-scrollbar-thumb:active {
+  background-color: #ffaf1d;
+}
+
+.szh-menu {
+  background-color: #000000 !important;
+  padding: 15px 0px !important;
+  @media (max-width: 768px) {
+    width: 100vw !important;
+    top: unset !important;
+    bottom: 10px;
+  }
+}
+.szh-menu li {
+  background: #000000;
+  color: white;
+  width: 200px;
+  margin-bottom: 5px;
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+.szh-menu li:hover {
+  color: #ffaf1d;
+}
+
+.hoverItem:hover svg path {
+  stroke: #ffc700;
+}
+.active svg path, .active svg circle, .active svg ellipse {
+  stroke: #ffc700;
+}
+
+.smallSVG svg {
+  width: 18px;
+}
+
+.Toastify__toast {
+  color: unset !important;
+  background: none !important;
+  margin-bottom: 0 !important;
+}
+
+.Toastify__progress-bar {
+  /* display: none; */
+  visibility: hidden;
+}
+.Toastify__toast-body {
+  padding: 0 !important;
+}
+.Toastify__toast-container {
+  padding: 0 !important;
+}
+
+.Toastify__toast-container--top-right {
+  right: 0 !important;
+  top: 3px !important;
+}
+
+svg {
+  cursor: pointer;
+}
+@layer base {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
