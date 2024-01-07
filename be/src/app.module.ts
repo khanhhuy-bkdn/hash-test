@@ -4,7 +4,7 @@ import { CatsModule } from './cats/cats.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://huynguyenflyteam:As359VXRweHfe4WH@cluster0.cinrkhw.mongodb.net/test'),
+    MongooseModule.forRoot('mongodb+srv://<Username>:<Password>@cluster0.cinrkhw.mongodb.net/test'),
     CatsModule,
   ],
 })
