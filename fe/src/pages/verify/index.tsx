@@ -37,16 +37,14 @@ const PoolList = ({ }: PoolListProps) => {
 
       const res = await getDataByTxHash(searchValue);
 
-      if (res != undefined) {
-        const hashValue = (await HashContract.read(
-          HASH_ADDRESS_MUMBAI as Address,
-          'hashList',
-          [res.onchainId]
-        )) as string;
-        console.log(hashValue)
-        if (res.data === hashValue) {
-          result = 'Valid';
-        }
+      const hashValue = (await HashContract.read(
+        HASH_ADDRESS_MUMBAI as Address,
+        'hashList',
+        [res?.onchainId || 0]
+      )) as string;
+
+      if (res.data === hashValue) {
+        result = 'Valid';
       }
 
       setResult(result);

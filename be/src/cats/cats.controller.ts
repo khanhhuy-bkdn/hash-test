@@ -19,7 +19,7 @@ export class CatsController {
 
     @Get(':txHash')
     async findOne(@Param('txHash') txHash: string): Promise<Cat> {
-        return this.catsService.findOne({ txHash });
+        return this.catsService.findOne(txHash);
     }
 
     @Delete(':id')

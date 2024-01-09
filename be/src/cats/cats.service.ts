@@ -6,7 +6,7 @@ import { Cat } from './schemas/cat.schema';
 
 @Injectable()
 export class CatsService {
-  constructor(@InjectModel(Cat.name) private readonly catModel: Model<Cat>) {}
+  constructor(@InjectModel(Cat.name) private readonly catModel: Model<Cat>) { }
 
   async create(createCatDto: CreateCatDto): Promise<Cat> {
     const createdCat = await this.catModel.create(createCatDto);
@@ -17,8 +17,8 @@ export class CatsService {
     return this.catModel.find().exec();
   }
 
-  async findOne(id: string): Promise<Cat> {
-    return this.catModel.findOne({ _id: id }).exec();
+  async findOne(txHash: string): Promise<Cat> {
+    return this.catModel.findOne({ txHash }).exec();
   }
 
   async delete(id: string) {
