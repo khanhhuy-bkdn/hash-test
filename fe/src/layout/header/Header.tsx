@@ -54,7 +54,7 @@ const Header = (props: INavbarProps) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="m-auto w-full flex flex-wrap items-center justify-between px-4 lg:px-20  max-w-[1440px]">
-          <nav>
+          <nav className='mr-0 ml-auto'>
             <ul className="navbar flex items-center text-sm lg:text-xl font-medium text-white">
               <>
                 <Button

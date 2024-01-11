@@ -7,7 +7,7 @@ export const ADDRESS_ZERO: Address =
 export const MAX_UINT256 =
   '115792089237316195423570985008687907853269984665640564039457584007913129639935';
 
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://testnet-api.arthur.exchange';
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
 
 export const ALCHEMY_MUMBAI_API_KEY = process.env.NEXT_PUBLIC_ALCHEMY_MUMBAI_API_KEY;
 

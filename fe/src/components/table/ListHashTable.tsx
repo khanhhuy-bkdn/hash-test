@@ -45,12 +45,12 @@ const ListHashTable: React.FC<ListHashTableProps> = ({
                   <td
                     className="py-4 text-sm px-4 border-b border-[#344054] text-left relative font-semibold"
                   >
-                    {item?.txHash}
+                    <div className='break-all'>{item?.txHash}</div>
                   </td>
                   <td className="py-4 text-sm px-4 border-b border-[#344054] text-right">
-                    ${item?.onchainId}
+                    {item?.onchainId}
                   </td>
-                  <td className="py-4 text-sm px-4 border-b border-[#344054] text-right">
+                  <td className="py-4 w-[400px] text-sm px-4 border-b border-[#344054] text-right">
                     {item?.data}
                   </td>
                 </tr>

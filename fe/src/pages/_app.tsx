@@ -15,12 +15,8 @@ import SuccessTx from '@/components/loading/SuccessTx';
 import AppLayout from '@/layout/layouts/AppLayout';
 import HomeLayout from '@/layout/layouts/HomeLayout';
 import {
-  ALCHEMY_MUMBAI_API_KEY,
   APP_BASED_CHAIN,
-  INFURA_API_KEY
 } from '@/utils/constants';
-import { alchemyProvider } from '@wagmi/core/providers/alchemy';
-import { infuraProvider } from '@wagmi/core/providers/infura';
 import { Open_Sans } from 'next/font/google';
 import { useRouter } from 'next/router';
 import { WagmiConfig, configureChains, createConfig } from 'wagmi';
@@ -39,20 +35,7 @@ const { chains, publicClient } = configureChains(
   [polygonMumbai],
   [
     publicProvider(),
-    alchemyProvider({
-      apiKey: ALCHEMY_MUMBAI_API_KEY!,
-    }),
-    infuraProvider({
-      apiKey: INFURA_API_KEY!,
-    }),
   ]
-  // [
-  //   jsonRpcProvider({
-  //     rpc: (chain) => ({
-  //       http: 'https://polygon-mumbai-bor.publicnode.com',
-  //     }),
-  //   }),
-  // ]
 );
 
 const config = createConfig({
